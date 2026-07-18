@@ -6,24 +6,32 @@
 // 1.采用循环的算法实现。
 // 2.采用递归的算法实现。
 #include <stdio.h>
-float myPower_cycle(float x, int N){
-    float a = x;
-    for (int i = 1; i < N; i++)
-    {
-        x *= a;
+float myPower_cycle(float x, int N) {
+    if (N == 0) return 1.0f;
+    if (N > 0) {
+        float result = 1.0f;
+        for (int i = 0; i < N; i++) {
+            result *= x;
+        }
+        return result;
+    } else {
+        int n = -N;
+        float result = 1.0f;
+        for (int i = 0; i < n; i++) {
+            result *= x;
+        }
+        return 1.0f / result;
     }
-    
-    return x;
 }
-float myPower1_recursion(float x, int N){
-    if (N == 0)
-    {
-        return 1;
+float myPower_recursion(float x, int N) {
+    if (N == 0) return 1.0f;          // 递归终止条件
+    if (N > 0) {
+        return x * myPower_recursion(x, N - 1);
+    } else {
+        // N < 0：递归计算正次方，再取倒数
+        return 1.0f / myPower_recursion(x, -N);
     }
-    N--;
-    return myPower1_recursion(x , N) * x;
 }
-
 int main(int argc, char const *argv[])
 {
     float a;
