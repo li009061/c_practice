@@ -1,0 +1,9 @@
+# 编译产物
+[0-9]*
+a.out
+*.o
+*.out
+*.tmp
+*.exe
+*.obj
+.vscode/
