@@ -1,0 +1,13 @@
+{
+    "files.autoSave": "afterDelay",
+    //控制AI补全
+    "editor.inlineSuggest.enabled": false,
+    "editor.quickSuggestions": {
+        "other": true,
+        "comments": false,
+        "strings": false
+    },
+    "editor.suggestOnTriggerCharacters": true,
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
+    "editor.acceptSuggestionOnCommitCharacter": true
+}

@@ -14,4 +14,10 @@ a.out
 *.obj
 
 # VS Code 配置
-.vscode/
+.vscode/study/mst/[a-zA-Z]*
+# 忽略编译产物
+study/**/[a-z]*
+study/**/[A-Z]*
+*.o
+*.exe
+a.out
