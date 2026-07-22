@@ -19,4 +19,8 @@ int is_prime(int num);
 //冰雹猜想到达1的步数
 int hailstone_steps(unsigned int n);
 
+//三点求圆心
+int get_circle_center(double x1, double y1, double x2, double y2, double x3, double y3,
+                      double *cx, double *cy);
+
 #endif

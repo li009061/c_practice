@@ -2,10 +2,8 @@
 
 int main(){
     int a;
-    char b;
-    scanf("%d,%c",&a,&b);
-
-    printf("%c\n", a); 
+    char b = 'a';
+    printf("%d\n", sizeof(a)); 
     printf("%d\n", b); 
     return 0;
 }

@@ -37,9 +37,16 @@ int main(int argc, char const *argv[])
     float a;
     int b;
     printf("请输入底数x和幂指数N的值:\n");
-    scanf("%f %d", &a, &b);
+    while (1)
+    {
+        if ( scanf("%f %d", &a, &b) == 2 && getchar() == '\n')
+        break;
+        printf("请再次输入底数x和幂指数N的值:\n");
+        while (getchar() != '\n');
+    }
+    
     float end = myPower_cycle(a, b);
-    float end1 = myPower1_recursion(a, b);
+    float end1 = myPower_recursion(a, b);
 
     printf("x的N次幂为:%.4f\n", end);
     printf("x的N次幂为:%.4f\n", end1);
